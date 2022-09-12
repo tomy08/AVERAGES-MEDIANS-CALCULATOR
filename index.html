@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de notas</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>AVERAGES AND MEDIANS CALCULATOR</h1>
+    <div class="tutorial-container">
+      <h3>
+        <span> Enter your marks (1 to 10) in the boxes. Use the button </span>
+        <span> Calculate</span>
+        <span>to get the average and the median of your marks or press</span>
+        <span>Reset</span>
+        <span>
+          to delete the entered values. If you need more values press</span
+        >
+      </h3>
+    </div>
+    <div class="input-container">
+      <input type="number"  min="1" name="inputs" oninput="if (this.value > 10) this.value = 10; if (this.value < 1) this.value = '';" onKeypress="if (event.keyCode < 45 || event.keyCode > 57 ) event.returnValue = false;"></input>
+      <span class="plus">+</span>
+      <input type="number"  min="1" name="inputs" oninput="if (this.value > 10) this.value = 10; if (this.value < 1) this.value = '';" onKeypress="if (event.keyCode < 45 || event.keyCode > 57 ) event.returnValue = false;"></input>
+      <span class="plus">+</span>
+      <input type="number"  min="1" name="inputs" oninput="if (this.value > 10) this.value = 10; if (this.value < 1) this.value = '';" onKeypress="if (event.keyCode < 45 || event.keyCode > 57 ) event.returnValue = false;"></input>
+      <span class="plus">+</span>
+      <input type="number"  min="1" name="inputs" oninput="if (this.value > 10) this.value = 10; if (this.value < 1) this.value = '';" onKeypress="if (event.keyCode < 45 || event.keyCode > 57 ) event.returnValue = false;"></input>
+    </div>
+    <div class="add-elements">
+      <button onclick="calculate()" class="calculate-button"><span>Calculate</span></button>
+      <button  onclick="createBoxes()" > <span class="plus-button" >+</span></button>
+      <button onclick="reset()" class="calculate-button"><span>Reset</span>
+    </div>
+    <div class="average-container">
+
+    </div>
+    <script src="./math.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
