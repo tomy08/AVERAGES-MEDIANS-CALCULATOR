@@ -37,7 +37,9 @@ async function calculate() {
     document.createRange().createContextualFragment(``)
   );
   for (let index = 0; index < inputs.length; index++) {
-    calculateList.push(Number(inputs[index].value));
+    if (inputs[index].value) {
+      calculateList.push(Number(inputs[index].value));
+    }
   }
   for (let index = 0; index < calculateList.length; index++) {
     if (calculateList[index] == 0) {
