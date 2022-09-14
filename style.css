@@ -140,6 +140,13 @@ h4 {
     margin: 10px;
     border-radius: 7px;
   }
+  input {
+    font-size: 29px;
+  }
+  .plus {
+    position: relative;
+    font-size: 50px;
+  }
 }
 @media (max-width: 410px) {
   input {
