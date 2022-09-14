@@ -31,7 +31,7 @@ function reset() {
   );
   calculateList.splice(0, calculateList.length);
 }
-async function calculate() {
+function calculate() {
   const divContainer = document.querySelector(".average-container");
   divContainer.replaceChildren(
     document.createRange().createContextualFragment(``)
@@ -47,15 +47,21 @@ async function calculate() {
     }
   }
 
-  console.log(calculateList);
-  const average = await MathFunction.calculatorAverage(calculateList);
-  const averageText = document.createElement("h4");
-  averageText.innerText = `Your average is ${average}`;
-  divContainer.append(averageText);
-  const median = await MathFunction.calculatorMedian(calculateList);
-  const medianText = document.createElement("h4");
-  medianText.innerText = `Your median is ${median}`;
-  divContainer.append(medianText);
-  calculateList.splice(0, calculateList.length);
-  calculateList.length = 0;
+  if (calculateList.length) {
+    const average = MathFunction.calculatorAverage(calculateList);
+    const averageText = document.createElement("h4");
+    averageText.innerText = `Your average is ${average}`;
+    divContainer.append(averageText);
+    const median = MathFunction.calculatorMedian(calculateList);
+    const medianText = document.createElement("h4");
+    medianText.innerText = `Your median is ${median}`;
+    divContainer.append(medianText);
+    calculateList.splice(0, calculateList.length);
+    calculateList.length = 0;
+  } else {
+    const errorText = document.createElement("h4");
+    errorText.innerText = `You haven't put any input.
+      Please put an input`;
+    divContainer.append(errorText);
+  }
 }

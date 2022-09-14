@@ -3,8 +3,8 @@ class MathFunction {
     return !(lista.length % 2);
   };
 
-  static calculatorMedian = (listaDesordenada) => {
-    const lista = MathFunction.tidyList(listaDesordenada);
+  static calculatorMedian = (listaDisordened) => {
+    const lista = listaDisordened.sort((a, b) => a - b);
     const listaisPair = MathFunction.isPair(lista);
 
     if (listaisPair) {
@@ -28,10 +28,5 @@ class MathFunction {
 
     const average = plusList / lista.length;
     return average;
-  };
-
-  static tidyList = (listaDisordenada) => {
-    const list = listaDisordenada.sort((a, b) => a - b);
-    return list;
   };
 }
