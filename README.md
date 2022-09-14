@@ -1,0 +1,5 @@
+# AVERAGES-MEDIANS-CALCULATOR
+
+This is an AVERAGES AND MEDIANS CALCULATOR that is made in HTML, CSS and JavaScript
+
+WEBSITE: https://tom-spider-dev.github.io/AVERAGES-MEDIANS-CALCULATOR/
