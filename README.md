@@ -2,4 +2,4 @@
 
 This is an AVERAGES AND MEDIANS CALCULATOR that is made in HTML, CSS and JavaScript
 
-WEBSITE: https://tom-spider-dev.github.io/AVERAGES-MEDIANS-CALCULATOR/
+WEBSITE: https://tomy08.github.io/AVERAGES-MEDIANS-CALCULATOR/
